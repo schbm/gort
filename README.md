@@ -1,6 +1,8 @@
 # gort
 Slice sorting in golang.
 
+TODO: Add proper benchmarking.
+
 Can be used as a reference point.
 Currently the following algorithms are implemented:
 1) Insertion
