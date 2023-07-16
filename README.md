@@ -8,7 +8,7 @@ Currently the following algorithms are implemented:
 1) Insertion
 2) Selection
 3) Bubble
-4) Quick
+4) Quick (& Quick Optimized see diagram)
 5) Shell
 
 Functions use the following type constraint:
