@@ -19,10 +19,11 @@ package gort
 		start with min variation
 */
 func Selection[C Ordered](arr []C) {
-	var size int = len(arr)
-	var currentIndex int // current index of iteration -> left to right
-	var minIndex int     // index of num smaller than current index
-	var swap C
+	var (
+		size         int = len(arr)
+		currentIndex int // current index of iteration -> left to right
+		minIndex     int // index of num smaller than current index
+	)
 
 	for currentIndex = 0; currentIndex < size-1; currentIndex++ {
 		minIndex = currentIndex
@@ -31,8 +32,6 @@ func Selection[C Ordered](arr []C) {
 				minIndex = i
 			}
 		}
-		swap = arr[currentIndex]
-		arr[currentIndex] = arr[minIndex]
-		arr[minIndex] = swap
+		arr[currentIndex], arr[minIndex] = arr[minIndex], arr[currentIndex]
 	}
 }

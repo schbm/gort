@@ -36,9 +36,11 @@ func Quick[C Ordered](arr []C) {
 	arr[0], arr[pivotIndex] = arr[pivotIndex], arr[0] // Move pivot to the first position
 
 	//_# 2-way partition_
-	pivot := arr[0]
-	i := 1
-	j := size - 1
+	var (
+		pivot C   = arr[0]
+		i     int = 1
+		j     int = size - 1
+	)
 
 	for i <= j {
 		for i <= j && arr[i] <= pivot {

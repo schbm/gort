@@ -16,10 +16,12 @@ end
 */
 
 func Insertion[C Ordered](arr []C) {
-	var currVal C
-	var currentIndex int
-	var currentIndexLeft int
-	var size int = len(arr)
+	var (
+		currVal          C
+		currentIndex     int
+		currentIndexLeft int
+		size             int = len(arr)
+	)
 
 	for currentIndex = 1; currentIndex < size; currentIndex++ { //start on second item and iterate to the right
 		currVal = arr[currentIndex]         //cache curr item

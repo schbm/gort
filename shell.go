@@ -4,9 +4,11 @@ package gort
 h = 1
 while h < n, h = 3*h + 1
 while h > 0,
-    h = h / 3
-    for k = 1:h, insertion sort a[k:h:n]
-    → invariant: each h-sub-array is sorted
+
+	h = h / 3
+	for k = 1:h, insertion sort a[k:h:n]
+	→ invariant: each h-sub-array is sorted
+
 end
 
 PROPERTIES
@@ -16,9 +18,12 @@ O(n3/2) time as shown (see below)
 Adaptive: O(n·lg(n)) time when nearly sorted
 */
 func Shell[C Ordered](arr []C) {
-	var size int = len(arr)
-	//3x+1 incr seq : 1,4,13,40
-	var h int = 1    //distance between values
+	var (
+		size int = len(arr)
+		//3x+1 incr seq : 1,4,13,40
+		h int = 1 //distance between values
+	)
+
 	for h < size/3 { //calc sequence
 		h = 3*h + 1
 	}
